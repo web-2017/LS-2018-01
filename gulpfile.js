@@ -13,6 +13,8 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
+const imagemin = require('gulp-imagemin');
+
 const path = {
     root: './build',
     templates: {
@@ -77,9 +79,20 @@ function server() {
     browserSync.watch(path.root + '/**/*.*', browserSync.reload);
 }
 
-// перенос картинок
+// сжатие картинок
 function images() {
     return gulp.src(path.images.src)
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo(
+                [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            )
+        ]))
         .pipe(gulp.dest(path.images.dest));
 }
 
