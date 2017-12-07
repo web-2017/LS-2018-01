@@ -15,6 +15,8 @@ const webpackConfig = require('./webpack.config.js');
 
 const imagemin = require('gulp-imagemin');
 
+const gulpTaskFonts = require('gulp-task-fonts');
+
 const path = {
     root: './build',
     templates: {
@@ -24,6 +26,11 @@ const path = {
     styles: {
         src: 'src/styles/**/*.scss',
         dest: 'build/assets/styles/'
+    },
+    fonts: {
+        src: 'src/styles/fonts/**.*',
+        syle: 'src/styles/fonts/stylesheet.scss',
+        dest: 'build/assets/styles/fonts/'
     },
     images: {
         src: 'src/images/**/*.*',
@@ -59,7 +66,7 @@ function clean() {
 
 // watch
 function watch() {
-    gulp.watch(path.styles.src, styles);
+    gulp.watch(path.styles.src, styles, fonts);
     gulp.watch(path.templates.src, templates);
     gulp.watch(path.images.src, images);
 }
@@ -96,15 +103,21 @@ function images() {
         .pipe(gulp.dest(path.images.dest));
 }
 
+function fonts() {
+    return gulp.src(path.fonts.src)
+        .pipe(gulp.dest(path.fonts.dest))
+}
+
 
 
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.fonts = fonts;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, fonts, scripts),
     gulp.parallel(watch, server)
 ));
