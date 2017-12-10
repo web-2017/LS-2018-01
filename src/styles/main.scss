@@ -19,10 +19,7 @@ $bernierR: bernier_regularregular;
 $bernierD: bernier_distressedregular;
 $bernierS: bernier_shaderegular;
 
-
-
-
-
+// reset css
 @import 'common/normalize';
 
 // fonts
@@ -32,3 +29,6 @@ $bernierS: bernier_shaderegular;
 
 // pages
 @import 'pages/home';
+
+// sections
+@import 'pages/header';

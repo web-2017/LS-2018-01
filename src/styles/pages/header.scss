@@ -1,0 +1,163 @@
+.header{
+    width: 100vw;
+    height: 100vh;
+    background: url('../../images/bg/bg.png') no-repeat;
+    background-size: cover;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    a, img{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__links{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    &__item{
+        display: inline-block;
+        vertical-align: middle;
+        list-style: none;
+        padding: 0 12px;
+        opacity: .6;
+        transition: .2s;
+        
+        &_link{
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        &:first-child{
+            padding-left: 0;
+        }
+
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+
+.menu__btn{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+
+.header{
+    &__block{
+        width: 380px;
+        height: 400px;
+        text-align: center;
+    }
+
+    &__img{
+        padding-bottom: 30px;
+        width: 142px;
+        height: 142px;
+        // border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        img{
+            display: inline-block;
+            width: 142px;
+            height: 142px;
+            
+        }
+    }
+
+    &__content{
+        color: #ffffff;
+    }
+
+    &__title{
+        letter-spacing: 1px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    &__subtitle{
+        opacity: .8;
+    }
+}
+
+#arrow__down{
+    position: absolute;
+    bottom: 75px;
+    z-index: 9999;
+    opacity: 0.8;
+    transition: .2s;
+
+    &:hover{
+        opacity: 1;
+    }
+    
+    &_link{
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+.header__triangle{
+    width: 100vw;
+    bottom: 0;
+    height: 20%;
+    position: absolute;
+
+    &_left{
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            background: url('../../images/icons/about_bg_right.svg') no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            z-index: 1;
+            transform: rotateY(-180deg);
+        }
+    }
+    
+    &_right{
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
+        height: 100%;
+        &:before{
+            content: '';
+            position: absolute;
+            right: 0;
+            background: url('../../images/icons/about_bg_right.svg') no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            
+            z-index: 1;
+        }
+    }
+}
+
