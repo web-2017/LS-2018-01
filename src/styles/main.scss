@@ -1,0 +1,34 @@
+// colors
+$lgreen: #00bfa5;
+$green: #009688;
+$grey: #455a64;
+$grey2:#6E777C;
+$lgrey: #D6D6D6;
+$dark: #373e42;
+$red: #E44845;
+$blue: #6da3bd;
+$inp: #f0efea;
+
+// fonts
+//-roboto
+$robotoR: robotoregular;
+$robotoM: robotomedium;
+$robotoL: robotolight;
+//-Bernier
+$bernierR: bernier_regularregular;
+$bernierD: bernier_distressedregular;
+$bernierS: bernier_shaderegular;
+
+
+
+
+
+@import 'common/normalize';
+
+// fonts
+@import 'fonts/stylesheet';
+
+@import 'common/base';
+
+// pages
+@import 'pages/home';

@@ -1,0 +1,47 @@
+body{
+    font: 16px/1.46 robotoregular, Arial sans-serif;
+}
+
+.link{
+    color: $red;
+    text-decoration: none;
+}
+
+.h1{
+    margin: 70px 0;
+    color: $dark;
+}
+
+a{
+    text-decoration: none;
+    &:visited{
+        color: $blue;
+    }
+}
+
+.title_35{
+    font-size: 35px;
+    color: $grey;
+    font-family: $bernierR;
+    padding: 28px 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+    font-weight: 200;
+
+    &:after, &:before{
+        content: '';
+        background: #c4c9cc;
+        width: 20px;
+        height: 5px;
+        position: absolute;
+        top: 13%;
+    }
+    &:before{
+        left: 15%;
+    }
+    &:after{
+        right: 15%;
+    }
+}
