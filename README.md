@@ -6,6 +6,11 @@
 
 #### Как установить проект
 
-1. clone this repo
+1. clone this repo 
 2. npm i
 3. gulp //run in terminal
+
+### Установленны сборки
+
+* gulp
+* webpack
