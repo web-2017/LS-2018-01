@@ -201,12 +201,12 @@
 
     &_login{
         &:before{
-            background: url('/images/icons/login.svg') center center no-repeat;
+            background: url('../images/icons/login.svg') center center no-repeat;
         }
     }
     &_password{
         &:before{
-            background: url('/images/icons/password.svg') center center no-repeat;
+            background: url('../images/icons/password.svg') center center no-repeat;
         }
     }
 }
