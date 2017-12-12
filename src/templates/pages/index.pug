@@ -1,0 +1,84 @@
+extends ../_template
+
+block variables
+  - var title = 'Главная страница'
+
+block content
+  section#home
+    .login__btn
+      a.login__btn-link(href="#") Авторизация
+    //- Авторизация
+    #auth__wrap
+      .auth__box
+        //- image
+        .auth__img
+          img(src="images/bg/welcome-photo.png", alt="")
+        //- title
+        .auth__cont
+          .auth__title
+            h1 Магомедов Марио
+          .auth__subtitle
+            h3 Личный сайт веб разработчика
+        //- icons
+        .auth__social
+          ul.social__item
+            li.social__list
+              a.social__list-link.vk(href="my-works.html")
+            li.social__list
+              a.social__list-link.git(href="about.html")
+            li.social__list
+              a.social__list-link.in(href="/blog.html")
+        //- buttons
+        .auth__buttons
+          ul
+            li
+              a(href="my-works.html") Мои работы
+            li
+              a(href="about.html") Обо мне
+            li
+              a(href="blog.html") Блог
+      //- background
+      .auth__box-bg
+        h2.title_35 авторизуйтесь
+        .auth__input
+          .login
+            input#login__name(type="text" placeholder="Логин" require).login__name
+            .login__name-icon.login__name_login
+          .login
+            input#login__pass(type="password" placeholder="Пароль" require).login__name
+            .login__name-icon.login__name_password
+
+        label(for="check").chek-label
+          input#check(type="checkbox", name="chek").checkbox 
+          span.checkbox__label Я человек 
+          br
+
+        span.robot Вы точно не робот ? 
+
+        .check__radio
+          label(for="yes")
+            input#yes(type="radio" name="yes")
+            span.check__radio_yes Да
+          label(for="no")
+            input#no(type="radio" name="yes")
+            span.check__radio_no Не уверен
+
+        .auth__box_btn
+          ul
+            li.auth__item
+              a.auth__item_link(href="/") На главную
+            li.auth__item
+              a.auth__item_link(href="#") Войти
+
+    .home__footer
+      p @ Магомедов Марио | Создано с любовью в LoftSchool | 2018
+
+
+
+
+
+
+
+
+
+

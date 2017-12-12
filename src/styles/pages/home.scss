@@ -32,7 +32,7 @@
     width: 380px;
     height: 400px;
     border-radius: 4px;
-    background: rgba(#fff, .7);
+    background: rgba(#fff, .8);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -105,28 +105,28 @@
 
 // button
 .auth__buttons{
-    display: flex;
-    justify-content: center;
-    align-self: flex-end;
     font-family: $robotoR;
     position: absolute;
     bottom: 0;
-    background: rgba($green, .4);
     box-sizing: border-box;
-    width: 100%;
 
     ul{
         margin: 0;
         padding: 0;
+        display: flex;
+        flex: auto;
     }
 
     li{
         display: inline-block;
         list-style: none;
+        border-right: 2px solid rgba($lgreen, 0.5);
 
         &:hover{
             a{
                 opacity: 1;
+                background-color: rgba($green, 1);
+                white-space: nowrap;
             }
         }
         
@@ -134,12 +134,12 @@
     a{
         text-decoration: none;
         display: inline-block;
-        padding: 10px 30px;
-        background-color: rgba($green, 0.7);
+        padding: 12px 32px;
+        background-color: rgba($lgreen, 1);
         color: #ffffff;
         box-sizing: border-box;
-        opacity: .6;
         transition: .2s;
+        white-space: nowrap;
     }
 }
 

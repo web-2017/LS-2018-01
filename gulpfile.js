@@ -12,17 +12,20 @@ const imagemin = require('gulp-imagemin');
 const gulpTaskFonts = require('gulp-task-fonts');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
+const svgSprite = require('gulp-svg-sprites');
+const cheerio = require('gulp-cheerio');
 
-const path = {
+
+const paths = {
     root: './build',
     templates: {
-        pages: 'src/templates/*.pug',
+        pages: 'src/templates/pages/*.pug',
         src: 'src/templates/**/*.pug'
     },
     styles: {
         src: 'src/styles/**/*.scss',
         dest: 'build/styles/'
-    },
+    },    
     fonts: {
         src: 'src/styles/fonts/**.*',
         syle: 'src/styles/fonts/stylesheet.scss',
@@ -30,8 +33,13 @@ const path = {
     },
     images: {
         src: 'src/images/**/*.*',
+        svg: 'src/images/icons/*.svg',
         dest: 'build/images/'
     },
+    svg: {
+      src: 'src/images/icons/*.svg',
+      dest: 'build/images/icons'
+  },
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/scripts/'
@@ -40,11 +48,11 @@ const path = {
 
 // pug
 function templates() {
-    return gulp.src(path.templates.pages)
+    return gulp.src(paths.templates.pages)
         .pipe(plumber())
         .pipe(pug({pretty: true}))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(path.root));
+        .pipe(gulp.dest(paths.root));
 }
 
 // scss
@@ -58,17 +66,17 @@ function styles() {
         }))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.styles.dest))
+        .pipe(gulp.dest(paths.styles.dest))
 }
 
 // очистка
 function clean() {
-    return del(path.root);
+    return del(paths.root);
 }
 
 // сжатие картинок
 function images() {
-    return gulp.src(path.images.src)
+    return gulp.src(paths.images.src)
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
@@ -80,37 +88,53 @@ function images() {
                 ]
             )
         ]))
-        .pipe(gulp.dest(path.images.dest));
+        .pipe(gulp.dest(paths.images.dest));
 }
 
+// svg
+function spriteBuild() {
+  return gulp.src(paths.svg.src)
+      .pipe(cheerio({
+          run: function ($) {
+              $('[fill]').removeAttr('fill');// удаляем инлайновое назначение цвета чтобы в css задать
+          }
+      }))
+      .pipe(svgSprite({
+          mode: "symbols",
+          preview: false
+      }))//к иконке теперь можно обращаться img/svg/symbols.svg#icon
+      .pipe(gulp.dest(paths.build.img))
+};
 
 // fonts
 function fonts() {
-    return gulp.src(path.fonts.src)
-        .pipe(gulp.dest(path.fonts.dest))
-}
-
-// watch
-function watch() {
-    gulp.watch(path.styles.src, styles, fonts);
-    gulp.watch(path.templates.src, templates);
-    gulp.watch(path.images.src, images);
-    gulp.watch(path.scripts.src, scripts);
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest))
 }
 
 // webpack
 function scripts() {
     return gulp.src('src/scripts/main.js')
         .pipe(gulpWebpack(webpackConfig, webpack))
-        .pipe(gulp.dest(path.scripts.dest));
+        .pipe(gulp.dest(paths.scripts.dest));
 }
+
+// watch
+function watch() {
+    gulp.watch(paths.styles.src, styles, fonts);
+    gulp.watch(paths.templates.src, templates);
+    gulp.watch(paths.images.src, images);
+    gulp.watch(paths.scripts.src, scripts);
+}
+
+
 
 // локальный сервер
 function server() {
     browserSync.init({
-        server: path.root
+        server: paths.root
     });
-    browserSync.watch(path.root + '/**/*.*', browserSync.reload);
+    browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
 
 exports.templates = templates;

@@ -1,36 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
+    <title>Обо мне</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="styles/main.min.css">
-    <script src="scripts/bundle.js" defer></script>
-    <title> блог
-    </title>
+    <script src="scripts/bundle.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <header class="header">
-      <div class="header__links">
-        <ul class="header__list">
-          <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/vk.svg" alt=""></a></li>
-          <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/github.svg" alt=""></a></li>
-          <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/in.svg" alt=""></a></li>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__links">
+          <ul class="header__list">
+            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/vk.svg" alt=""></a></li>
+            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/github.svg" alt=""></a></li>
+            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/in.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="menu__btn"><a class="menu__btn-link" id="btn__menu" href=""><img src="images/icons/hamburger.svg" alt="menu"></a></div>
+        <div class="header__block">
+          <div class="header__img"><img src="images/bg/welcome-photo.png" alt=""></div>
+          <div class="header__content"><span class="header__title">Магомедов Марио</span><br><span class="header__subtitle">Личный сайт вебразработчика</span></div>
+        </div>
+        <div id="arrow__down"><a class="arrow__down_link" href="#"><img src="../../images/icons/arrow_down.svg" alt=""></a></div>
+        <div class="header__triangle">
+          <div class="header__triangle_left"></div>
+          <div class="header__triangle_right"></div>
+        </div>
+      </header>
+      <div class="section blog">
+        <aside class="sidebar">
+          <nav class="sidebar-blog">
+            <ul class="sidebar-menu">
+              <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Самое важное в SASS</a></li>
+              <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Приемы верстки без которых необходится ни один сайт</a></li>
+              <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
+              <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">Почему я выбрал Jade</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="blog-content">
+          <div class="blog-content__title">
+            <h2 class="title_35">Самое важное в SASS</h2>
+            <div class="blog-content__data"> 
+              <p>20 декабря 2017</p>
+            </div>
+          </div>
+          <div class="blog-content__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque nulla possimus reprehenderit voluptate nihil molestiae, nobis eveniet consequuntur ipsum libero in inventore architecto autem expedita eum doloribus ad ratione. Sunt, obcaecati? Est commodi minus natus aperiam fugit, porro animi ut labore non in fugiat assumenda quam eligendi deserunt veritatis itaque vero doloremque sequi necessitatibus voluptate totam. In, est nemo inventore neque laudantium eius dolor a earum voluptates perspiciatis, reiciendis repellendus, adipisci ratione delectus ex pariatur consequuntur eligendi asperiores eaque mollitia repellat quisquam consequatur facere. Inventore, eos. Odio unde porro doloribus quae dolorum dolorem nostrum maxime. Delectus odio animi omnis amet? Quisquam asperiores fugit voluptatum, nihil, magni sint repudiandae perferendis minima eum, doloremque tempore amet voluptatibus placeat dolores ut ipsam totam nam. Eaque eos sint molestias nam aut, corrupti iure perferendis labore quisquam. Officia quia, dolorum tenetur possimus quae aliquam reiciendis magni esse, incidunt corrupti dolorem voluptates sapiente. Sit dolore veritatis totam tenetur enim dolores minus cum iusto sequi sint, doloremque nihil ea optio nulla mollitia hic sed modi omnis provident eaque culpa eius quam? Earum, rerum vero temporibus perspiciatis nihil sint ipsa at necessitatibus voluptatum enim explicabo vitae repudiandae similique. Accusamus ex obcaecati quod debitis harum iste enim non, ullam expedita? Quia animi delectus deserunt nesciunt, non aliquam quae ducimus quibusdam temporibus vero dolore natus sapiente asperiores iure sint, vitae veritatis quaerat molestias? Officia, deserunt. Molestias laboriosam quod culpa rerum officia veritatis soluta nam maxime alias harum perferendis beatae pariatur eum quos asperiores dolor sit reprehenderit cupiditate quae odit, repellat fuga, nesciunt aliquid ea? Natus doloribus commodi incidunt repellat eum maxime adipisci neque dolor voluptatibus facilis ex dicta soluta nesciunt qui, in aspernatur nihil sit a ab inventore sequi quo, pariatur non! Maxime reiciendis totam magnam magni aut ratione fuga repellat, eaque vitae, voluptatem perspiciatis debitis consequuntur nisi quod.</p>
+          </div>
+          <div class="blog-content__title">
+            <h2 class="title_35">Приемы верстки без которых необходится ни один сайт</h2>
+            <div class="blog-content__data"> 
+              <p>20 декабря 2017</p>
+            </div>
+          </div>
+          <div class="blog-content__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque nulla possimus reprehenderit voluptate nihil molestiae, nobis eveniet consequuntur ipsum libero in inventore architecto autem expedita eum doloribus ad ratione. Sunt, obcaecati? Est commodi minus natus aperiam fugit, porro animi ut labore non in fugiat assumenda quam eligendi deserunt veritatis itaque vero doloremque sequi necessitatibus voluptate totam. In, est nemo inventore neque  dsd laudantium eius dolor a earum voluptates perspiciatis, reiciendis repellendus, adipisci ratione delectus ex pariatur consequuntur eligendi asperiores eaque mollitia repellat quisquam consequatur facere. Inventore, eos. Odio unde porro doloribus quae dolorum dolorem nostrum maxime. Delectus odio animi omnis amet? Quisquam asperiores fugit voluptatum, nihil, magni sint repudiandae perferendis minima eum, doloremque tempore amet voluptatibus placeat dolores ut ipsam totam nam. Eaque eos sint molestias nam aut, corrupti iure perferendis labore quisquam. Officia quia, dolorum tenetur possimus quae aliquam reiciendis magni esse, incidunt corrupti dolorem voluptates sapiente. Sit dolore veritatis totam tenetur enim dolores minus cum iusto sequi sint, doloremque nihil ea optio nulla mollitia hic sed modi omnis provident eaque culpa eius quam? Earum, rerum vero temporibus perspiciatis nihil sint ipsa at necessitatibus voluptatum enim explicabo vitae repudiandae similique. Accusamus ex obcaecati quod debitis harum iste enim non, ullam expedita? Quia animi delectus deserunt nesciunt, non aliquam quae ducimus quibusdam temporibus vero dolore natus sapiente asperiores iure sint, vitae veritatis quaerat molestias? Officia, deserunt. Molestias laboriosam quod culpa rerum officia veritatis soluta nam maxime alias harum perferendis beatae pariatur eum quos asperiores dolor sit reprehenderit cupiditate quae odit, repellat fuga, nesciunt aliquid ea? Natus doloribus commodi incidunt repellat eum maxime adipisci neque dolor voluptatibus facilis ex dicta soluta nesciunt qui, in aspernatur nihil sit a ab inventore sequi quo, pariatur non! Maxime reiciendis totam magnam magni aut ratione fuga repellat, eaque vitae, voluptatem perspiciatis debitis consequuntur nisi quod.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Мои работы</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Обо мне</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Авторизация</a></li>
         </ul>
-      </div>
-      <div class="menu__btn"><a class="menu__btn-link" id="btn__menu" href=""><img src="images/icons/hamburger.svg" alt="menu"></a></div>
-      <div class="header__block">
-        <div class="header__img"><img src="images/bg/welcome-photo.png" alt=""></div>
-        <div class="header__content"><span class="header__title">Магомедов Марио</span><br><span class="header__subtitle">Личный сайт вебразработчика</span></div>
-      </div>
-      <div id="arrow__down"><a class="arrow__down_link" href="#"><img src="../../images/icons/arrow_down.svg" alt=""></a></div>
-      <div class="header__triangle">
-        <div class="header__triangle_left"></div>
-        <div class="header__triangle_right"></div>
-      </div>
-    </header>
-    <div class="wrap">
-      <section></section>
+        <hr>
+        <p>lsdf</p>
+      </footer>
     </div>
   </body>
 </html>

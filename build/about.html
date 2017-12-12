@@ -1,36 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
+    <title>Обо мне</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="styles/main.min.css">
-    <script src="scripts/bundle.js" defer></script>
-    <title> Обо мне
-    </title>
+    <script src="scripts/bundle.js" defer></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <header class="header">
-      <div class="header__links">
-        <ul class="header__list">
-          <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/vk.svg" alt=""></a></li>
-          <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/github.svg" alt=""></a></li>
-          <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/in.svg" alt=""></a></li>
-        </ul>
-      </div>
-      <div class="menu__btn"><a class="menu__btn-link" id="btn__menu" href=""><img src="images/icons/hamburger.svg" alt="menu"></a></div>
-      <div class="header__block">
-        <div class="header__img"><img src="images/bg/welcome-photo.png" alt=""></div>
-        <div class="header__content"><span class="header__title">Магомедов Марио</span><br><span class="header__subtitle">Личный сайт вебразработчика</span></div>
-      </div>
-      <div id="arrow__down"><a class="arrow__down_link" href="#"><img src="../../images/icons/arrow_down.svg" alt=""></a></div>
-      <div class="header__triangle">
-        <div class="header__triangle_left"></div>
-        <div class="header__triangle_right"></div>
-      </div>
-    </header>
-    <div class="wrap">
-      <section></section>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__links">
+          <ul class="header__list">
+            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/vk.svg" alt=""></a></li>
+            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/github.svg" alt=""></a></li>
+            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/in.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="menu__btn"><a class="menu__btn-link" id="btn__menu" href=""><img src="images/icons/hamburger.svg" alt="menu"></a></div>
+        <div class="header__block">
+          <div class="header__img"><img src="images/bg/welcome-photo.png" alt=""></div>
+          <div class="header__content"><span class="header__title">Магомедов Марио</span><br><span class="header__subtitle">Личный сайт вебразработчика</span></div>
+        </div>
+        <div id="arrow__down"><a class="arrow__down_link" href="#"><img src="../../images/icons/arrow_down.svg" alt=""></a></div>
+        <div class="header__triangle">
+          <div class="header__triangle_left"></div>
+          <div class="header__triangle_right"></div>
+        </div>
+      </header>
+      <section class="section about">
+        <div class="about__left">
+          <div class="about__triangle about__triangle_left">
+            <svg class="triangle triangle_fill_white"></svg>
+          </div>
+          <div class="about__left-title">
+            <div class="block-title">Обо мне</div>
+          </div>
+          <div class="about__left-content">
+            <div class="user-description">
+              <div class="user-description__image"><img class="user-description__avatar" src="" alt=""></div>
+              <div class="user-description__title">
+                <div class="block-subtitle">Кто я</div>
+              </div>
+              <div class="user-description__text text-block">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nulla a odit consequatur, hic beatae praesentium tenetur doloremque, sit exercitationem molestiae tempore maxime delectus autem, perspiciatis maiores nesciunt similique nostrum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores atque deleniti facilis nemo labore sunt ex perferendis esse suscipit? Sint facilis in ipsa labore quos dicta eos totam veniam nostrum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__right">
+          <div class="about__triangle about__triangle_right">
+            <svg class="triangle triangle_fill_beige"></svg>
+          </div>
+          <div class="about__right-title block-subtitle">Кто я
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores atque deleniti facilis nemo labore sunt ex perferendis esse suscipit? Sint facilis in ipsa labore quos dicta eos totam veniam nostrum.</p>
+          </div>
+          <div class="about__right-content">
+            <ul class="skills-list">
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <div class="skills-row__title">Frontend</div>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <div class="skills-row__title">Backend</div>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="skills-list__item">
+                <div class="skills-row">
+                  <div class="skills-row__title">Workflow</div>
+                  <ul class="skills-row__list">
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                    <li class="skills-row__item">
+                      <div class="skill">
+                        <svg class="skill__circle"></svg>
+                        <div class="skill__circle"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section map">
+        <div class="google-map"></div>
+        <div class="map__contacts">
+          <div class="contacts">
+            <div class="contacts__title">
+              <div class="block-subtitle">Контакты</div>
+            </div>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">skype</div>
+                  <div class="contacts-row__content">skype_kdn</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">mail</div>
+                  <div class="contacts-row__content">astahov@gmail.com</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">phone</div>
+                  <div class="contacts-row__content">+79211 123 23 23</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">mark</div>
+                  <div class="contacts-row__content">Новосибирск</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer class="map__footer footer">
+        <div class="footer__row">
+          <div class="container">
+            <div class="footer__col footer__col-left">
+              <nav class="menu"></nav>
+            </div>
+            <div class="footer__col footer__col-right">
+              <ul class="socials socials_rounded">
+                <li class="socials__item"><a class="socials__item socials__item_vk" href=""></a></li>
+                <li class="socials__item"><a class="socials__item socials__item_fb" href=""></a></li>
+                <li class="socials__item"><a class="socials__item socials__item_in" href=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="container">
+            <div class="footer__col footer__col-left">
+              <div class="footer__text">
+                <p>Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+              </div>
+            </div>
+            <div class="footer__col footer__col-right">
+              <div class="footer__text footer__text_margin_top">
+                <p>Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

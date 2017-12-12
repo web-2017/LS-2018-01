@@ -8,6 +8,7 @@ $dark: #373e42;
 $red: #E44845;
 $blue: #6da3bd;
 $inp: #f0efea;
+$footer: #53595d;
 
 // fonts
 //-roboto
@@ -32,3 +33,7 @@ $bernierS: bernier_shaderegular;
 
 // sections
 @import 'pages/header';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/my-works';
+@import 'pages/footer';

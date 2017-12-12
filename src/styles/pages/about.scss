@@ -1,0 +1,21 @@
+.about{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &__left,
+    &__right{
+        width: 50%;
+        height: 100%;
+    }
+}
+
+
+
+
+.about__triangle{
+    
+    
+}
