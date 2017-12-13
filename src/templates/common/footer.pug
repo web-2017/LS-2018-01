@@ -1,8 +1,31 @@
 footer.footer
-  ul.menu
-    each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-      li.menu__item
-        a(href="#").menu__link #{item}
+  .section-footer
+    .footer__left
+      ul.menu
+        each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+          li.menu__item
+            a(href="#").menu__link #{item}
+
+    .footer__right
+      .socials-icons
+        ul.socials
+          li.socials__item
+            a(href="#").social__link
+              img(src="images/icons/vk_round.svg", alt="").social__link_img
+          li.socials__item
+            a(href="#").social__link
+              img(src="images/icons/github_round.svg", alt="").social__link_img
+          li.socials__item
+            a(href="#").social__link
+              img(src="images/icons/in_round.svg", alt="").social__link_img
+  hr.hr
+  .section-footer
+    .footer__left.footer__left_content
+
+      p Я вебразработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
+    .footer__right.footer__left_content
+      p @ Магомедов Марио | создано с любовью в LoftSchool | 2017
       
-  hr
-  p lsdf
+      
+    
+  
