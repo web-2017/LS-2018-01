@@ -1,45 +1,107 @@
 extends ../_template
-  
+
 block variables
   - var title = 'Обо мне'
 
 block content
   include ../common/header
-
+  //- about
   section.section.about
-    .about__left
-      .about__triangle.about__triangle_left
-        svg.triangle.triangle_fill_white
-      .about__left-title
-        .block-title Обо мне
+    .about__title
+      .title_63 Обо мне
 
-      .about__left-content
-        .user-description
-          .user-description__image
-            img.user-description__avatar(src="", alt="")
-          .user-description__title
-            .block-subtitle Кто я
-          .user-description__text.text-block
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nulla a odit consequatur, hic beatae praesentium tenetur doloremque, sit exercitationem molestiae tempore maxime delectus autem, perspiciatis maiores nesciunt similique nostrum.
-            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores atque deleniti facilis nemo labore sunt ex perferendis esse suscipit? Sint facilis in ipsa labore quos dicta eos totam veniam nostrum.
-    
-    .about__right
-      .about__triangle.about__triangle_right
-        svg.triangle.triangle_fill_beige
-      .about__right-title.block-subtitle Кто я
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores atque deleniti facilis nemo labore sunt ex perferendis esse suscipit? Sint facilis in ipsa labore quos dicta eos totam veniam nostrum.
-      .about__right-content
-        ul.skills-list
-          each item in ['Frontend', 'Backend', 'Workflow']
-            li.skills-list__item
-              .skills-row
-                .skills-row__title #{item}
-                ul.skills-row__list
-                  each skill in ['Html5', 'css3', 'JavaScript']
-                    li.skills-row__item
-                      .skill
-                        svg.skill__circle
-                        .skill__circle
+    .about__img
+      .about__img_pic
+        img(src="images/bg/welcome-photo.png", alt="")
+
+      .about__img_content
+        .title_35 Обо мне
+        .about__img_text
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda consectetur minima maiores, quam nesciunt impedit asperiores rerum numquam id. Provident.
+          p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda consectetur minima maiores, quam nesciunt impedit asperiores rerum numquam id. Provident.
+
+    .about__content
+      .about__content_title
+        .title_35 Чемя могу быть
+        br
+        .title_35-n Вам полезен
+
+      .about__content_text
+        p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по проядку.
+
+    .about__progress
+      //- Frontend
+      .scills
+        h3.scills_title Frontend
+        ul.scills__item
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110' width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-90
+            span.scills__title HTML5
+
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-90
+            span.scills__title css3
+
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-75
+            span.scills__title javascript &amp; jQuery
+      
+      //- Backend
+      .scills
+        h3.scills_title Backend
+        ul.scills__item
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110' width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-0
+            span.scills__title php
+
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-0
+            span.scills__title mySQL
+
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-30
+            span.scills__title Node.js &amp; npm
+          
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-0
+            span.scills__title Mongo.db
+      
+      //- WorkFlow
+      .scills
+        h3.scills_title WorkFlow
+        ul.scills__item
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110' width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-90
+            span.scills__title Git
+
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-60
+            span.scills__title Gulp
+
+          li.scills__list
+            svg.circles(vievBox='0 0 110 110'  width='120' height='120')
+              circle(r='45' cx='50%' cy='50%' fill='none').circle__first
+              circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-30
+            span.scills__title Webpack
+
 
   section.section.map
     .google-map

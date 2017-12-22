@@ -3,7 +3,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
-<g>
+<g id="github_round">
 	<path fill="#FFFFFF" d="M30.5,24.5c-1.031,0-2.016,0.188-3.047,0.328C26.641,24.953,25.828,25,25,25s-1.641-0.047-2.453-0.172
 		C21.531,24.688,20.531,24.5,19.5,24.5c-2.547,0-4,2.109-4,4.5c0,4.781,4.375,5.516,8.188,5.516h2.625
 		c3.813,0,8.188-0.734,8.188-5.516C34.5,26.609,33.047,24.5,30.5,24.5z M20,32c-1.406,0-2-1.859-2-3s0.594-3,2-3s2,1.859,2,3

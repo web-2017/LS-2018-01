@@ -12,8 +12,10 @@ const imagemin = require('gulp-imagemin');
 const gulpTaskFonts = require('gulp-task-fonts');
 const plumber = require('gulp-plumber');
 const autoprefixer = require('gulp-autoprefixer');
-const svgSprite = require('gulp-svg-sprites');
+const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
+const svgmin = require('gulp-svgmin');
+const replace = require('gulp-replace');
 
 
 const paths = {
@@ -38,7 +40,7 @@ const paths = {
     },
     svg: {
       src: 'src/images/icons/*.svg',
-      dest: 'build/images/icons'
+      dest: 'build/images/icons/'
   },
     scripts: {
         src: 'src/scripts/**/*.js',
@@ -92,19 +94,43 @@ function images() {
 }
 
 // svg
-function spriteBuild() {
-  return gulp.src(paths.svg.src)
-      .pipe(cheerio({
-          run: function ($) {
-              $('[fill]').removeAttr('fill');// удаляем инлайновое назначение цвета чтобы в css задать
-          }
+const config = {
+    mode: {
+      symbol: {
+        sprite: "../sprite.svg",
+        example: {
+          dest: '../tmp/spriteSvgDemo.html' // демо html
+        }
+      }
+    }
+  };
+  
+function sprite(){
+    return gulp.src(paths.svg.src)
+      // минифицируем svg
+      .pipe(svgmin({
+        js2svg: {
+          pretty: true
+        }
       }))
-      .pipe(svgSprite({
-          mode: "symbols",
-          preview: false
-      }))//к иконке теперь можно обращаться img/svg/symbols.svg#icon
-      .pipe(gulp.dest(paths.build.img))
+      // удалить все атрибуты fill, style and stroke в фигурах
+      .pipe(cheerio({
+        run: function($) {
+          $('[fill]').removeAttr('fill');
+          $('[stroke]').removeAttr('stroke');
+          $('[style]').removeAttr('style');
+        },
+        parserOptions: {
+          xmlMode: true
+        }
+      }))
+      // cheerio плагин заменит, если появилась, скобка '&gt;', на нормальную.
+      .pipe(replace('&gt;', '>'))
+      // build svg sprite
+      .pipe(svgSprite(config))
+      .pipe(gulp.dest(paths.svg.dest));
 };
+
 
 // fonts
 function fonts() {
@@ -142,9 +168,10 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.fonts = fonts;
+exports.sprite = sprite;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, fonts, scripts),
+    gulp.parallel(styles, templates, images, sprite, fonts, scripts),
     gulp.parallel(watch, server)
 ));

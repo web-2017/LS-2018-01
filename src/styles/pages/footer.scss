@@ -73,3 +73,24 @@
     width: 38px;
 }
 
+
+
+.footer__right{
+    .icon{
+        line-height: 2rem;
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        margin-left: 10px;
+        vertical-align: middle;
+        cursor: pointer;
+        transition: .2s;
+        fill: $lgrey;
+        fill-opacity: .6;
+        &:hover{
+            fill: #fff;
+            fill-opacity: 1;
+        }
+    }
+   
+}
