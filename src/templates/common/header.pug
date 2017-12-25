@@ -1,34 +1,42 @@
-header.header
-    //- social links
-    .header__links
-        ul.header__list
-            li.header__item
-                a(href="").header__item_link
-                    img(src="images/icons/vk.svg", alt="")
-            li.header__item
-                a(href="").header__item_link
-                    img(src="images/icons/github.svg", alt="")
-            li.header__item
-                a(href="").header__item_link
-                    img(src="images/icons/in.svg", alt="")
+block variables
 
-    //- menu
-    .menu__btn
-        a#btn__menu.menu__btn-link(href="")
-            img(src="images/icons/hamburger.svg", alt="menu")
-    //- content
-    .header__block
-        .header__img
-            img(src="images/bg/welcome-photo.png", alt="")
-        .header__content
-            span.header__title Магомедов Марио
-            br
-            span.header__subtitle Личный сайт вебразработчика
-    //- button
-    #arrow__down
-        a(href="#").arrow__down_link
-            img(src="../../images/icons/arrow_down.svg", alt="")
-    //- svg
-    .header__triangle
-        .header__triangle_left
-        .header__triangle_right
+header.header(class= my_works)
+
+  .header__bg-title 
+    img(src='images/bg/' + header__bg)
+
+
+  //- social links
+  .header__links
+    ul.header__list
+      li.header__item
+        a(href="").header__item_link
+          img(src="images/icons/vk.svg", alt="")
+      li.header__item
+        a(href="").header__item_link
+          img(src="images/icons/github.svg", alt="")
+      li.header__item
+        a(href="").header__item_link
+          img(src="images/icons/in.svg", alt="")
+
+  //- menu
+  .menu__btn
+    a#btn__menu.menu__btn-link(href="")
+      img(src="images/icons/hamburger.svg", alt="menu")
+  //- content
+  .header__block
+    .header__img
+      img(src="images/bg/welcome-photo.png", alt="")
+    .header__content
+      span.header__title Магомедов Марио
+      br
+      span.header__subtitle Личный сайт вебразработчика
+  //- button
+  #arrow__down(class= arrow)
+    a(href="#").arrow__down_link
+      img(src="../../images/icons/arrow_down.svg", alt="")
+  //- svg
+  .header__triangle(class= worksd)
+    svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+      polygon.traingle__left(points='0,0 0,86 500.8,86 500.8,75.5')
+      polygon.traingle__right(points='1000,0 1000,86 500,86 500,75.5')

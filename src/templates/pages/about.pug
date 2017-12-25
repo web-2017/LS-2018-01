@@ -5,10 +5,17 @@ block variables
 
 block content
   include ../common/header
+
+  block variables
+    - var header__bg = "portfolio_header.png"
+    
   //- about
   section.section.about
     .about__title
       .title_63 Обо мне
+        .about__title_icon
+          svg.icon
+            use(xlink:href='images/icons/sprite.svg#about_header')
 
     .about__img
       .about__img_pic
@@ -16,6 +23,7 @@ block content
 
       .about__img_content
         .title_35 Обо мне
+
         .about__img_text
           p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda consectetur minima maiores, quam nesciunt impedit asperiores rerum numquam id. Provident.
           p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda consectetur minima maiores, quam nesciunt impedit asperiores rerum numquam id. Provident.
@@ -51,7 +59,7 @@ block content
               circle(r='45' cx='50%' cy='50%' fill='none').circle__first
               circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-75
             span.scills__title javascript &amp; jQuery
-      
+
       //- Backend
       .scills
         h3.scills_title Backend
@@ -73,13 +81,13 @@ block content
               circle(r='45' cx='50%' cy='50%' fill='none').circle__first
               circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-30
             span.scills__title Node.js &amp; npm
-          
+
           li.scills__list
             svg.circles(vievBox='0 0 110 110'  width='120' height='120')
               circle(r='45' cx='50%' cy='50%' fill='none').circle__first
               circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-0
             span.scills__title Mongo.db
-      
+
       //- WorkFlow
       .scills
         h3.scills_title WorkFlow
@@ -102,44 +110,68 @@ block content
               circle(r='45' cx='50%' cy='50%' fill='none' transform="rotate(-90 60 60)").circle__second.circle-30
             span.scills__title Webpack
 
-
+  //- map
   section.section.map
-    .google-map
+    .google-map#map
+      script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js")
+      script.
+        google.maps.event.addDomListener(window, 'load', init);
+
+          function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+              // How zoomed in you want the map to start at (always required)
+              zoom: 11,
+
+              // The latitude and longitude to center the map (always required)
+              center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+              // How you would like to style the map. 
+              // This is where you would paste any style found on Snazzy Maps.
+              styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#55d6c4"},{"visibility":"on"}]}]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(40.6700, -73.9400),
+              map: map,
+              title: 'Snazzy!'
+            });
+          }
+
+
     .map__contacts
       .contacts
         .contacts__title
-          .block-subtitle Контакты
+          .block-subtitle.title_35 Контакты
         ul.contacts__list
           - 
             var contacts = [
               ['skype', 'skype_kdn'],
-              ['mail', 'astahov@gmail.com'],
-              ['phone', '+79211 123 23 23'],
-              ['mark', 'Новосибирск'],
+              ['mail', 'webdevelope2017@gmail.com'],
+              ['phone', '+7(968)-607-9665'],
+              ['mark', 'Москва'],
             ]
           each contact in contacts
             li.contacts__item
               .contacts-row
-                .contacts-row__icon #{contact[0]}
+                .contacts-row__icon 
+                  svg.icon
+                    use(xlink:href='images/icons/sprite.svg#skype')
                 .contacts-row__content #{contact[1]}
-  footer.map__footer.footer
-    .footer__row
-      .container
-        .footer__col.footer__col-left
-          nav.menu
-        .footer__col.footer__col-right
-          ul.socials.socials_rounded
-            each item in ['vk', 'fb', 'in']
-              li.socials__item
-                a(href="" class=`socials__item socials__item_${item}`)
-    .footer__row
-      .container
-        .footer__col.footer__col-left
-          .footer__text
-            p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        .footer__col.footer__col-right
-          .footer__text.footer__text_margin_top
-            p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.  
+
+    include ../common/footer
+
+
+
 
 
 

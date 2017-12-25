@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Обо мне</title>
+    <title></title>
     <meta content="" name="author">
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -15,6 +15,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <div class="header__bg-title"> <img src="images/bg/portfolio_header.png"></div>
         <div class="header__links">
           <ul class="header__list">
             <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/vk.svg" alt=""></a></li>
@@ -29,13 +30,21 @@
         </div>
         <div id="arrow__down"><a class="arrow__down_link" href="#"><img src="../../images/icons/arrow_down.svg" alt=""></a></div>
         <div class="header__triangle">
-          <div class="header__triangle_left"></div>
-          <div class="header__triangle_right"></div>
+          <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="traingle__left" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
+            <polygon class="traingle__right" points="1000,0 1000,86 500,86 500,75.5"></polygon>
+          </svg>
         </div>
       </header>
       <section class="section about">
         <div class="about__title">
-          <div class="title_63">Обо мне</div>
+          <div class="title_63">Обо мне
+            <div class="about__title_icon">
+              <svg class="icon">
+                <use xlink:href="images/icons/sprite.svg#about_header"></use>
+              </svg>
+            </div>
+          </div>
         </div>
         <div class="about__img">
           <div class="about__img_pic"><img src="images/bg/welcome-photo.png" alt=""></div>
@@ -135,71 +144,133 @@
         </div>
       </section>
       <section class="section map">
-        <div class="google-map"></div>
+        <div class="google-map" id="map">
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+          <script>
+            google.maps.event.addDomListener(window, 'load', init);
+            
+              function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                  // How zoomed in you want the map to start at (always required)
+                  zoom: 11,
+            
+                  // The latitude and longitude to center the map (always required)
+                  center: new google.maps.LatLng(40.6700, -73.9400), // New York
+            
+                  // How you would like to style the map. 
+                  // This is where you would paste any style found on Snazzy Maps.
+                  styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#55d6c4"},{"visibility":"on"}]}]
+                };
+            
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+            
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+            
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                  position: new google.maps.LatLng(40.6700, -73.9400),
+                  map: map,
+                  title: 'Snazzy!'
+                });
+              }
+            
+            
+          </script>
+        </div>
         <div class="map__contacts">
           <div class="contacts">
             <div class="contacts__title">
-              <div class="block-subtitle">Контакты</div>
+              <div class="block-subtitle title_35">Контакты</div>
             </div>
             <ul class="contacts__list">
               <li class="contacts__item">
                 <div class="contacts-row">
-                  <div class="contacts-row__icon">skype</div>
+                  <div class="contacts-row__icon"> 
+                    <svg class="icon">
+                      <use xlink:href="images/icons/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
                   <div class="contacts-row__content">skype_kdn</div>
                 </div>
               </li>
               <li class="contacts__item">
                 <div class="contacts-row">
-                  <div class="contacts-row__icon">mail</div>
-                  <div class="contacts-row__content">astahov@gmail.com</div>
+                  <div class="contacts-row__icon"> 
+                    <svg class="icon">
+                      <use xlink:href="images/icons/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row__content">webdevelope2017@gmail.com</div>
                 </div>
               </li>
               <li class="contacts__item">
                 <div class="contacts-row">
-                  <div class="contacts-row__icon">phone</div>
-                  <div class="contacts-row__content">+79211 123 23 23</div>
+                  <div class="contacts-row__icon"> 
+                    <svg class="icon">
+                      <use xlink:href="images/icons/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row__content">+7(968)-607-9665</div>
                 </div>
               </li>
               <li class="contacts__item">
                 <div class="contacts-row">
-                  <div class="contacts-row__icon">mark</div>
-                  <div class="contacts-row__content">Новосибирск</div>
+                  <div class="contacts-row__icon"> 
+                    <svg class="icon">
+                      <use xlink:href="images/icons/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row__content">Москва</div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-      </section>
-      <footer class="map__footer footer">
-        <div class="footer__row">
-          <div class="container">
-            <div class="footer__col footer__col-left">
-              <nav class="menu"></nav>
-            </div>
-            <div class="footer__col footer__col-right">
-              <ul class="socials socials_rounded">
-                <li class="socials__item"><a class="socials__item socials__item_vk" href=""></a></li>
-                <li class="socials__item"><a class="socials__item socials__item_fb" href=""></a></li>
-                <li class="socials__item"><a class="socials__item socials__item_in" href=""></a></li>
+        <footer class="footer">
+          <div class="section-footer">
+            <div class="footer__left">
+              <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#">Мои работы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Обо мне</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Авторизация</a></li>
               </ul>
             </div>
-          </div>
-        </div>
-        <div class="footer__row">
-          <div class="container">
-            <div class="footer__col footer__col-left">
-              <div class="footer__text">
-                <p>Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+            <div class="footer__right">
+              <div class="socials-icons">
+                <ul class="socials">
+                  <li class="socials__item"><a class="social__link" href="#">
+                      <svg class="icon vk_round" width="55" height="55">
+                        <use xlink:href="images/icons/sprite.svg#vk_round"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="social__link" href="#">
+                      <svg class="icon github_round" width="55" height="55">
+                        <use xlink:href="images/icons/sprite.svg#github_round"></use>
+                      </svg></a></li>
+                  <li class="socials__item"><a class="social__link" href="#">
+                      <svg class="icon in_round" width="55" height="55">
+                        <use xlink:href="images/icons/sprite.svg#in_round"></use>
+                      </svg></a></li>
+                </ul>
               </div>
             </div>
-            <div class="footer__col footer__col-right">
-              <div class="footer__text footer__text_margin_top">
-                <p>Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.  </p>
-              </div>
+          </div>
+          <hr class="hr">
+          <div class="section-footer">
+            <div class="footer__left footer__left_content">
+              <p>Я вебразработчик из Москвы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool</p>
+            </div>
+            <div class="footer__right footer__left_content">
+              <p>@ Магомедов Марио | создано с любовью в LoftSchool | 2017</p>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </section>
     </div>
   </body>
 </html>

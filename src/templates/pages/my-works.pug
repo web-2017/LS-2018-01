@@ -1,0 +1,99 @@
+extends ../_template
+
+block variables
+  - var title = 'Мои работы'
+
+block content
+  include ../common/header
+
+    .header-myworks
+      .about__title
+        .title_63 мои работы
+          .about__title_icon
+            svg.icon
+              use(xlink:href='images/icons/sprite.svg#works_header')
+
+    svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+      polygon.traingle__left_2(points='0,0 0,86 500.8,86 500.8,40.0')
+      polygon.traingle__right_2(points='1000,0 1000,86 500,86 500,40.0')
+
+  block variables
+    - var header__bg = "portfolio_header.png"
+    - var worksd = 'header__triangle-works'
+    - var arrow = 'arrow__down-works'
+    - var my_works = 'header__title_63'
+      
+    
+
+  //- slider
+  section.section.works
+    .works__content
+      .works__left
+        .works-slider__content
+          .works-slider__content-wrapper
+            .works-slider__display
+              img.works-slider__display-pic(src='', alt='')
+            .works-slider__item-about
+              .works__subtitle
+                .subtitle
+              .works__content-desc
+              .works__content-btn
+                a.works__content-view(href='#')
+                  i.fa.works__content-view-icon.fa-link
+                  |  Посмотреть сайт
+      .works__right
+        .works-slider
+          .works-slider__controls
+            a.works-slider__control-btn.works-slider__control-btn_left(href='#')
+              ul.works-slider__control-list
+                li.works-slider__control-item(data-full='./images/content/slider/1.png', data-title='Агентсво интернет решений "ITLoft"', data-skills='node', data-link='http://itloft.ru/')
+                  img.works-slider___control-img(src='./images/content/slider/1.png')
+                li.works-slider__control-item(data-full='./images/content/slider/2.png', data-title='Школа онлай-образования "LoftSchool"', data-skills='html5, CSS3, javascript, php', data-link='http://loftschool.com/')
+                  img.works-slider___control-img(src='./images/content/slider/2.png')
+                li.works-slider__control-item(data-full='./images/content/slider/3.png', data-title='Портал обучающих уроков "LoftBlog"', data-skills='Ruby on Rails, javascript, RESTful', data-link='http://loftblog.ru/')
+                  img.works-slider___control-img(src='./images/content/slider/3.png')
+                li.works-slider__control-item(data-full='./images/content/slider/4.png', data-title='Сайт "Атма йога"', data-skills='UX, design, seo', data-link='http://atmayoga.ru/')
+                  img.works-slider___control-img(src='./images/content/slider/4.png')
+            a.works-slider__control-btn.works-slider__control-btn_right(href='#')
+
+  section.section.work-about
+    .about__title
+      .title_63 Что обо мне
+        .about__title_icon
+          svg.icon
+            use(xlink:href='images/icons/sprite.svg#about_header')
+      br
+      span.about__title_sub Говорят
+        
+    .work-reviews
+      .flex
+        .flex__item
+          .quotes
+            img(src="images/bg/quotes.png", alt="alt")
+          .work-reviews_title
+            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .reviews-fio
+            .reviews-fio__img
+              img(src="images/bg/k_dmitryi.png", alt="alt")
+            .reviews-fio__desc
+              span.reviews-fio__name Ковальчук Дмитрий
+              br
+              span.reviews-fio__str основатьель Loftschool
+
+        .flex__item
+          .quotes
+            img(src="images/bg/quotes.png", alt="alt")
+          .work-reviews_title
+            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+          .reviews-fio
+            .reviews-fio__img
+              img(src="images/bg/s_vladimir.png", alt="alt")
+            .reviews-fio__desc
+              span.reviews-fio__name Ковальчук Дмитрий
+              br
+              span.reviews-fio__str основатьель Loftschool
+            
+
+  //- footer
+  include ../common/footer
+  

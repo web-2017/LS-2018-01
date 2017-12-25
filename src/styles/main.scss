@@ -26,14 +26,22 @@ $bernierS: bernier_shaderegular;
 // fonts
 @import 'fonts/stylesheet';
 
+// sections
 @import 'common/base';
+@import 'pages/header';
+@import 'common/slider';
 
 // pages
 @import 'pages/home';
-
-// sections
-@import 'pages/header';
 @import 'pages/about';
-@import 'pages/blog';
 @import 'pages/my-works';
+@import 'pages/blog';
+
+
+
+
+
+
+
 @import 'pages/footer';
+

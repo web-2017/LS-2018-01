@@ -81,7 +81,8 @@ a{
 
     &:after, &:before{
         content: '';
-        border: 2px solid $lgrey;
+        border: 2px solid $grey;
+        opacity: .6;
         display: block;
         width: 20px;
         position: absolute;
