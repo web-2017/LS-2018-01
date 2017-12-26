@@ -1,2 +1,4 @@
+console.log('Mario');
 
-// module.exports = sliderInit;
+
+module.exports = sliderInit;

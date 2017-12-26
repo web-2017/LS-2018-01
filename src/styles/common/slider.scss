@@ -1427,7 +1427,7 @@ body.mobile-sidebar .sidebar {
 
 .works-slider__control-btn_left {
   &:after {
-    background-image: url("/images/icons/tr-bottom.png");
+    background-image: url("../images/icons/tr-bottom.png");
   }
   &:hover:after {
     animation: slideInDown .3s;

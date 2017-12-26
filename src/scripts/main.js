@@ -1,5 +1,35 @@
-
 const $ = require('jquery'); // если нужен
+// parallax mountain home page
+
+let parallax = () => {
+    const parallaxContainer = document.getElementById('parallax');
+
+    if(parallaxContainer){
+
+        const layers = parallaxContainer.children;
+            // функция движения мыши
+        const moveLayer = e => {
+            const initialX = (window.innerWidth / 2) - e.pageX;
+            const initialY = (window.innerHeight / 2) - e.pageY;
+
+            let i = 0;
+
+            for(let layer of layers){
+                const divider = i / 50;
+                const positionX = initialX * divider;
+                const positionY = initialY * divider;
+
+                layer.style.transform = `translate(${positionX}px, ${positionY}px)`;
+
+                i++;
+            }
+        }
+
+        window.addEventListener('mousemove', moveLayer);
+    }
+};
+parallax();
+
 
 // Авторизация
 let login = document.querySelector('.login__btn');
@@ -28,14 +58,15 @@ function authRotateHome() {
 
 authRotateHome();
 
+// slider
 var aviatitle = {
     generate: function (string, block) {
         var wordsArray = string.split(' '),
             stringArray = string.split(''),
             sentence = [],
             word = '';
-        console.log(wordsArray);
-        console.log(stringArray);
+        // console.log(wordsArray);
+        // console.log(stringArray);
         block.text('');
 
         wordsArray.forEach(function (currentWord) {
@@ -68,6 +99,7 @@ var aviatitle = {
 
     }
 };
+
 var Slider = function (container) {
     var nextBtn = container.find('.works-slider__control-btn_left'), // левая  кнопка
         prevBtn = container.find('.works-slider__control-btn_right'), // правая кнопка
@@ -208,7 +240,7 @@ var Slider = function (container) {
     this.setDefaults = function () {
         var _that = this,
             data = getDataArrays();
-        console.log(data);
+        // console.log(data);
         // создаем разметку
         generateMarkups();
 
@@ -231,7 +263,6 @@ var Slider = function (container) {
 
         // текстовые описания
         changeTextData(_that.counter);
-
     };
 
     this.moveSlide = function (direction) {
@@ -303,4 +334,8 @@ $('.works-slider__control-btn_right').on('click', function (e) {
     slider.moveSlide('next');
 });
 
-console.dir(slider);
+// console.dir(slider);
+// end SLIDER
+
+
+
