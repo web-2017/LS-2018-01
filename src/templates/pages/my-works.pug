@@ -92,7 +92,27 @@ block content
               span.reviews-fio__name Ковальчук Дмитрий
               br
               span.reviews-fio__str основатьель Loftschool
-            
+
+    .feedback
+      .feedback__frame
+      .blur
+      .feedback__form
+        .title_35 Связаться со мной
+        form(action="")
+          input#fb_name(type="text" placeholder="Имя")
+          input#fb_mail(type="email" placeholder="Email")
+          textarea#fb_textarea(name="", placeholder="Ваше сообщение")
+        //- btn
+        .feedback__btn
+          .feedback__btn-left
+            a(href="#")#feedback__btn-left Отправить
+          .feedback__btn-right
+            a(href="#")#feedback__btn-right Очистить
+
+    #btn__up
+      a(href="#")
+        svg.icon
+            use(xlink:href='images/icons/sprite.svg#portf_arrow_up')
 
   //- footer
   include ../common/footer
