@@ -8,6 +8,15 @@
     overflow: hidden;
     max-width: 100%;
 
+    @include laptop() {
+        .traingle{
+            width: 100vw;
+            bottom: 0%;
+            left: 0;
+            position: absolute;
+        }
+    }
+
     ul{
         margin: 0;
         padding: 0;

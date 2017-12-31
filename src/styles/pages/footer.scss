@@ -4,12 +4,41 @@
     background: $footer;
     position: relative;
 
+    @include laptop() {
+        font-size: .9em;
+    }
+    @include ipad() {
+        height: 225px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
     .section-footer{
         height: 50%;
         flex-direction: row;
         align-items: center;
         display: flex;
         justify-content: space-between;
+
+        @include ipad() {
+            display: block;
+            text-align: center;
+            height: 60%;
+            box-sizing: border-box;
+        }
+    }
+
+    &__left{
+        @include ipad() {
+            margin-left: 0!important;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__right{
+        @include ipad() {
+            margin-right: 0!important;
+        }
     }
 
     &__left{

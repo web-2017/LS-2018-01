@@ -5,6 +5,7 @@ block variables
 
 block content
   section#home
+    .bg-phone
     #parallax.parallax
       - for (var i = 4; i < 9; i++)
         .parallax__layer
@@ -38,14 +39,16 @@ block content
             li.social__list
               a.social__list-link.in(href="/blog.html")
         //- buttons
-        .auth__buttons
+        .auth__box_btn
           ul
-            li
-              a(href="my-works.html") Мои работы
-            li
-              a(href="about.html") Обо мне
-            li
-              a(href="blog.html") Блог
+            li.auth__item
+              a.auth__item_link(href="my-works.html") Мои работы
+            li.auth__item
+              a.auth__item_link(href="about.html") Обо мне
+            li.auth__item
+              a.auth__item_link(href="blog.html") Блог
+
+
       //- background
       .auth__box-bg
         h2.title_35 авторизуйтесь

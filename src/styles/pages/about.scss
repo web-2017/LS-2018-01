@@ -7,6 +7,50 @@
     grid-template-areas: 
         "about img title"
         "about img circle";
+    
+    @include laptop() {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 180px 100%;
+        grid-template-areas: 
+        "title title2"
+        "img progress";
+
+        .about__title{
+            grid-area: title;
+        }
+        .about__img{
+            grid-area: img;
+        }
+        .about__content{
+            grid-area: title2;
+        }
+        .about__progress{
+            grid-area: progress;
+        }
+    }
+    @include ipad() {
+        grid-template-columns: 100%;
+        grid-template-rows: 180px 100%;
+        grid-template-areas: 
+        "title"
+        "img"
+        "content"
+        "progress";
+        
+
+        .about__title{
+            grid-area: title;
+        }
+        .about__img{
+            grid-area: img;
+        }
+        .about__content{
+            grid-area: content;
+        }
+        .about__progress{
+            grid-area: progress;
+        }
+    }
 
     &__title{
         grid-area: about;
@@ -29,6 +73,13 @@
             text-align: center;
             width: 100%;
             height: 385px;
+
+            @include ipad(){
+                max-width: 470px;
+                margin: 0 auto;
+            }
+
+
             img{
                 display: block;
                 margin: 0 auto;
@@ -100,16 +151,25 @@
         font-size: 28px;
         color: $grey;
         margin-bottom: 0;
+
+        @include ipad(){
+            text-align: center;
+            margin-bottom: 10px;
+        }
     }
 }
 
 .scills__item{
     padding: 0;
     margin: 0;
+
+    @include ipad() {
+        text-align: center;
+    }
 }
 .scills__list{
     position: relative;
-    width: 120px;
+    width: 16%;
     height: 120px;
     display: inline-block;
     margin: 0 20px;
@@ -132,6 +192,16 @@
     color: $green;
     text-transform: uppercase;
     text-align: center;
+
+    @include laptop(){
+        left: 79%;
+        font-size: 12px;
+    }
+    @include ipad(){
+        left: 50%;
+        font-size: 13px;
+    }
+
 }
 
 .circles{

@@ -1,3 +1,24 @@
+$laptop: 1024px;
+$ipad: 768px;
+$phone: 320px;
+
+@mixin laptop() {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+}
+@mixin ipad() {
+    @media screen and (max-width: $ipad) {
+        @content;
+    }
+}
+@mixin phone() {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+
 body{
     font: 16px/1.46 robotoregular, Arial sans-serif;
 }

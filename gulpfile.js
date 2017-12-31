@@ -77,19 +77,25 @@ function clean() {
 }
 
 // сжатие картинок
+// function images() {
+//     return gulp.src(paths.images.src)
+//         .pipe(imagemin([
+//             imagemin.gifsicle({interlaced: true}),
+//             imagemin.jpegtran({progressive: true}),
+//             imagemin.optipng({optimizationLevel: 5}),
+//             imagemin.svgo(
+//                 [
+//                     {removeViewBox: true},
+//                     {cleanupIDs: false}
+//                 ]
+//             )
+//         ]))
+//         .pipe(gulp.dest(paths.images.dest));
+// }
+
+// просто переносим картинки
 function images() {
     return gulp.src(paths.images.src)
-        .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.jpegtran({progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo(
-                [
-                    {removeViewBox: true},
-                    {cleanupIDs: false}
-                ]
-            )
-        ]))
         .pipe(gulp.dest(paths.images.dest));
 }
 

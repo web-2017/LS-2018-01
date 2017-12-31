@@ -1,6 +1,9 @@
 .header__triangle-works{
     .traingle{
         height: 300px;
+        @include laptop(){
+            height: 200px;
+        }
     }
 }
 
@@ -31,11 +34,21 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 10px;
+    z-index: 10;
+
+    @include laptop() {
+        bottom: 3px;
+    }
 
     .about__title{
         background: transparent;
         .title_63{
             z-index: 5;
+
+            @include laptop() {
+                font-size: 2.5em;
+            }
+
             .about__title_icon{
                 position: absolute;
                 top: -12%;
