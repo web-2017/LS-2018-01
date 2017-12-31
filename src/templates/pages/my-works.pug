@@ -12,10 +12,14 @@ block content
           .about__title_icon
             svg.icon
               use(xlink:href='images/icons/sprite.svg#works_header')
-
+    
     svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
       polygon.traingle__left_2(points='0,0 0,86 500.8,86 500.8,40.0')
       polygon.traingle__right_2(points='1000,0 1000,86 500,86 500,40.0')
+    .tiangle-phone
+      svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+        polygon.traingle__left_2(points='0,0 0,86 500.8,86 500.8,15.0')
+        polygon.traingle__right_2(points='1000,0 1000,86 500,86 500,15.0')
 
   block variables
     - var header__bg = "portfolio_header.png"
@@ -62,6 +66,13 @@ block content
             use(xlink:href='images/icons/sprite.svg#about_header')
       br
       span.about__title_sub Говорят
+    
+    .about__title.phone-about_title
+      .title_63 Что обо мне
+        br
+        span говорят
+      
+      
         
     .work-reviews
       .flex

@@ -69,6 +69,11 @@
         &:first-child{
             padding: 0px;
         }
+
+        @include phone() {
+            font-size: 13px;
+            padding: 0 4px;
+        }
     }
     &__link{
         color: #fff;

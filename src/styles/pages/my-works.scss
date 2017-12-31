@@ -4,11 +4,25 @@
         @include laptop(){
             height: 200px;
         }
+        @include phone(){
+            height: 120px;
+        }
+    }
+}
+
+.tiangle-phone{
+    display: none;
+
+    @include phone() {
+        display: block;
     }
 }
 
 .arrow__down-works{
-    bottom: 200px!important;
+    bottom: 200px;
+    @include phone() {
+        bottom: 145px!important;
+    }
 }
 
 .header__title_63{
@@ -39,6 +53,9 @@
     @include laptop() {
         bottom: 3px;
     }
+    @include phone() {
+        bottom: 0;
+    }
 
     .about__title{
         background: transparent;
@@ -49,15 +66,28 @@
                 font-size: 2.5em;
             }
 
+            @include phone() {
+                font-size: 35px;
+                white-space: nowrap;
+            }
+
             .about__title_icon{
                 position: absolute;
                 top: -12%;
                 left: -23%;
                 z-index: -1;
+
+                @include phone() {
+                    top: -26%;
+                    left: -17%;
+                }
                 .icon{
                     fill: $lgrey;
                     fill-opacity: .6;
                     width: 150%;
+                    @include phone() {
+                        width: 125%;
+                    }
                 }
             }
         }
@@ -74,11 +104,22 @@
     .about__title{
         background: transparent;
         line-height: 1;
+        @include phone() {
+            display: none;
+        }
+
         &_icon{
             top: -90%!important;
             left: -20%!important;
+            @include phone() {
+                top: -41px !important;
+                left: 0%!important;
+                width: 70%;
+                font-size: 35px;
+            }
             .icon{
                 width: 150%!important;
+                
             }
         }
         .title_63{
@@ -96,6 +137,18 @@
             display: inline-block;
             font-weight: 200;
             z-index: 5;
+
+            @include phone() {
+                font-size: 35px;
+            }
+        }
+    }
+
+    .phone-about_title{
+        display: none;
+
+        @include phone() {
+            display: block;
         }
     }
 }
@@ -104,8 +157,24 @@
     font-size: 28px;
     color: $grey;
 }
+.work-reviews{
 
-.flex{
+    .flex{
+        &__item{
+            @include phone() {
+               margin: 30px 20px;
+            }
+        }
+    }
+
+    .quotes{
+        @include phone() {
+            text-align: center;
+        }
+    }
+}
+
+flex{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -115,7 +184,6 @@
         width: 360px;
         min-height: 230px;
         margin: 70px 20px;
-
     }
 }
 
@@ -151,6 +219,10 @@
     border-radius: 5px;
     position: relative;
     overflow: hidden;
+
+    @include phone() {
+        width: 90%;
+    }
 
     .blur{
         position: absolute;

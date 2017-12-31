@@ -35,6 +35,10 @@
         position: absolute;
         top: 30px;
         left: 30px;
+        @include phone() {
+            top: 15px;
+            left: 10px;
+        }
     }
 
     &__item{
@@ -65,6 +69,10 @@
     position: absolute;
     right: 30px;
     top: 30px;
+    @include phone() {
+        top: 15px;
+        right: 10px;
+    }
 }
 
 
@@ -103,21 +111,32 @@
         letter-spacing: 1px;
         font-size: 28px;
         font-weight: bold;
+
+        @include phone() {
+            font-size: 21px;
+        }
     }
 
     &__subtitle{
         opacity: .8;
+        @include phone() {
+            font-size: 14px;
+        }
     }
 }
 
 #arrow__down{
     position: absolute;
-    bottom: 75px;
+    bottom: 160px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
     opacity: 0.8;
     transition: .2s;
+
+    @include phone() {
+        bottom: 145px;
+    }
 
     &:hover{
         opacity: 1;
