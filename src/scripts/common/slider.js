@@ -39,8 +39,6 @@ var aviatitle = {
   }
 };
 
-
-
 var Slider = function (container) {
   var nextBtn = container.find('.works-slider__control-btn_left'), // левая  кнопка
     prevBtn = container.find('.works-slider__control-btn_right'), // правая кнопка

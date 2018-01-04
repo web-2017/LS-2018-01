@@ -1,7 +1,7 @@
 
 let funMenu = () => {
   let menuBtn =  document.querySelector('.menu__btn a');
-  menuBtn.onclick = (e) => {
+   menuBtn.onclick = (e) => {
     e.preventDefault();
     
     document.querySelector('.menu__btn').classList.toggle('menu__btn_active');
@@ -9,4 +9,5 @@ let funMenu = () => {
 };
 
 funMenu();
+
 module.exports = funcMenu;
