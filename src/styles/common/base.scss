@@ -135,3 +135,15 @@ a{
     font-weight: 200;
     position: relative;
 }
+
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/preloader/mount_preloader.gif') center center no-repeat;
+    background-size: cover;
+    z-index: 99999;
+    display: block;
+}

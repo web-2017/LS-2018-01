@@ -13,17 +13,37 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
+    <div id="preloader"></div>
     <div class="wrapper">
       <header class="header header__title_63">
         <div class="header__bg-title"> <img src="images/bg/portfolio_header.png"></div>
         <div class="header__links">
           <ul class="header__list">
-            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/vk.svg" alt=""></a></li>
-            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/github.svg" alt=""></a></li>
-            <li class="header__item"><a class="header__item_link" href=""><img src="images/icons/in.svg" alt=""></a></li>
+            <li class="header__item"><a class="header__item_link" href="">
+                <svg class="vk header__social">
+                  <use xlink:href="images/icons/sprite.svg#vk"> </use>
+                </svg></a></li>
+            <li class="header__item"><a class="header__item_link" href="">
+                <svg class="vk header__social">
+                  <use xlink:href="images/icons/sprite.svg#github"> </use>
+                </svg></a></li>
+            <li class="header__item"><a class="header__item_link" href="">
+                <svg class="vk header__social">
+                  <use xlink:href="images/icons/sprite.svg#in"> </use>
+                </svg></a></li>
           </ul>
         </div>
-        <div class="menu__btn"><a class="menu__btn-link" id="btn__menu" href=""><img src="images/icons/hamburger.svg" alt="menu"></a></div>
+        <div class="menu__btn"><a class="menu__btn-link" id="btn__menu" href="#"><span class="menu__btn_span"></span><span class="menu__btn_span"></span><span class="menu__btn_span"></span></a>
+          <div class="menu-humburger"></div>
+          <div class="menu-humburger_wrap">
+            <ul class="menu-humburger__list">
+              <li class="menu-humburger__item"><a class="menu-humburger__link title_63" href="my-works.html">Мои работы</a></li>
+              <li class="menu-humburger__item"><a class="menu-humburger__link title_63" href="blog.html">Блог</a></li>
+              <li class="menu-humburger__item"><a class="menu-humburger__link title_63" href="about.html">Обо мне</a></li>
+              <li class="menu-humburger__item"><a class="menu-humburger__link title_63" href="/">Авторизация</a></li>
+            </ul>
+          </div>
+        </div>
         <div class="header__block">
           <div class="header__img"><img src="images/bg/welcome-photo.png" alt=""></div>
           <div class="header__content"><span class="header__title">Магомедов Марио</span><br><span class="header__subtitle">Личный сайт вебразработчика</span></div>

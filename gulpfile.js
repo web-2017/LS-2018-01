@@ -46,7 +46,7 @@ const paths = {
         src: 'src/scripts/**/*.js',
         dest: 'build/scripts/'
     }
-}
+};
 
 // pug
 function templates() {
@@ -61,14 +61,16 @@ function templates() {
 function styles() {
     return gulp.src('./src/styles/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(gulp.dest(paths.styles.dest));
 }
 
 // очистка
@@ -135,7 +137,7 @@ function sprite(){
       // build svg sprite
       .pipe(svgSprite(config))
       .pipe(gulp.dest(paths.svg.dest));
-};
+}
 
 
 // fonts

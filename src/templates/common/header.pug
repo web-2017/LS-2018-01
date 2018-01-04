@@ -7,22 +7,41 @@ header.header(class= my_works)
 
 
   //- social links
+  - var urlVk = 'images/icons/sprite.svg#vk';
+  - var urlGit = 'images/icons/sprite.svg#github';
+  - var urlIn = 'images/icons/sprite.svg#in';
+  
   .header__links
     ul.header__list
-      li.header__item
-        a(href="").header__item_link
-          img(src="images/icons/vk.svg", alt="")
-      li.header__item
-        a(href="").header__item_link
-          img(src="images/icons/github.svg", alt="")
-      li.header__item
-        a(href="").header__item_link
-          img(src="images/icons/in.svg", alt="")
+      each item in [urlVk, urlGit, urlIn]
+        li.header__item
+          a(href="").header__item_link
+            svg.vk.header__social
+              use(xlink:href='' + item) 
 
   //- menu
   .menu__btn
-    a#btn__menu.menu__btn-link(href="")
-      img(src="images/icons/hamburger.svg", alt="menu")
+    a#btn__menu.menu__btn-link(href="#")
+      span.menu__btn_span
+      span.menu__btn_span
+      span.menu__btn_span
+
+    .menu-humburger
+    - var myWorks = 'my-works.html'
+    - var blog = 'blog.html'
+    - var about = 'about.html'
+    - var auth = '/'
+      .menu-humburger_wrap
+        ul.menu-humburger__list
+          li.menu-humburger__item
+            a.menu-humburger__link(href="" + myWorks).title_63 Мои работы
+          li.menu-humburger__item
+            a.menu-humburger__link(href="" + blog).title_63 Блог
+          li.menu-humburger__item
+            a.menu-humburger__link(href="" + about).title_63 Обо мне
+          li.menu-humburger__item
+            a.menu-humburger__link(href="" + auth).title_63 Авторизация
+
   //- content
   .header__block
     .header__img

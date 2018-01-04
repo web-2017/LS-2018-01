@@ -1,331 +1,297 @@
-.header__triangle-works{
-    .traingle{
-        height: 300px;
-        @include laptop(){
-            height: 200px;
-        }
-        @include phone(){
-            height: 120px;
-        }
-    }
-}
-
-.tiangle-phone{
-    display: none;
-
-    @include phone() {
-        display: block;
-    }
-}
-
-.arrow__down-works{
-    bottom: 200px;
-    @include phone() {
-        bottom: 145px!important;
-    }
-}
-
-.header__title_63{
-    
-    
-
-    .traingle__left,
-    .traingle__right{
-        display: none;
-    }
-
-    .traingle__left_2{
-        fill: #efeee9;
-    }
-    .traingle__right_2{
-        fill: #efebe0;
-    }
-    
-}
-
-.header-myworks{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10px;
-    z-index: 10;
-
+.header__triangle-works {
+  .traingle {
+    height: 300px;
     @include laptop() {
-        bottom: 3px;
+      height: 200px;
     }
     @include phone() {
-        bottom: 0;
+      height: 120px;
     }
-
-    .about__title{
-        background: transparent;
-        .title_63{
-            z-index: 5;
-
-            @include laptop() {
-                font-size: 2.5em;
-            }
-
-            @include phone() {
-                font-size: 35px;
-                white-space: nowrap;
-            }
-
-            .about__title_icon{
-                position: absolute;
-                top: -12%;
-                left: -23%;
-                z-index: -1;
-
-                @include phone() {
-                    top: -26%;
-                    left: -17%;
-                }
-                .icon{
-                    fill: $lgrey;
-                    fill-opacity: .6;
-                    width: 150%;
-                    @include phone() {
-                        width: 125%;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
-.work-about{
-    padding: 70px 0;
-    box-sizing: border-box;
-    min-height: 1140px;
-    background: url('../images/bg/work-bg.png') center center no-repeat;
-    background-size: cover;
-
-    .about__title{
-        background: transparent;
-        line-height: 1;
-        @include phone() {
-            display: none;
-        }
-
-        &_icon{
-            top: -90%!important;
-            left: -20%!important;
-            @include phone() {
-                top: -41px !important;
-                left: 0%!important;
-                width: 70%;
-                font-size: 35px;
-            }
-            .icon{
-                width: 150%!important;
-                
-            }
-        }
-        .title_63{
-            &:first-child{
-                padding: 0;
-            }
-        }
-
-        &_sub{
-            font-size: 63px;
-            color: #455a64;
-            font-family: bernier_regularregular;
-            text-transform: uppercase;
-            margin: 0;
-            display: inline-block;
-            font-weight: 200;
-            z-index: 5;
-
-            @include phone() {
-                font-size: 35px;
-            }
-        }
-    }
-
-    .phone-about_title{
-        display: none;
-
-        @include phone() {
-            display: block;
-        }
-    }
+.tiangle-phone {
+  display: none;
+  @include phone() {
+    display: block;
+  }
 }
 
-.quotes{
-    font-size: 28px;
-    color: $grey;
-}
-.work-reviews{
-
-    .flex{
-        &__item{
-            @include phone() {
-               margin: 30px 20px;
-            }
-        }
-    }
-
-    .quotes{
-        @include phone() {
-            text-align: center;
-        }
-    }
+.arrow__down-works {
+  bottom: 200px;
+  @include phone() {
+    bottom: 145px!important;
+  }
 }
 
-flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-
-    &__item{
-        width: 360px;
-        min-height: 230px;
-        margin: 70px 20px;
-    }
+.header__title_63 {
+  .traingle__left,
+  .traingle__right {
+    display: none;
+  }
+  .traingle__left_2 {
+    fill: #efeee9;
+  }
+  .traingle__right_2 {
+    fill: #efebe0;
+  }
 }
 
-.work-reviews_title{
-    color: $grey;
-    font-family: robotoregular;
-}
-
-.reviews-fio{
-    &__img,
-    &__desc{
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    &__img{
-        padding-right: 20px;
-    }
-
-    &__desc{
-        color: $green;
-    }
-
-    &__name{
-        font-weight: bold;
-    }
-}
-
-.feedback{
-    width: 380px;
-    height: 450px;
-    margin: 0 auto;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-
-    @include phone() {
-        width: 90%;
-    }
-
-    .blur{
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background: url('../images/bg/feedback.jpg') center center no-repeat;
-        filter: blur(32px);
-        background-position: -45em -43em;
-    }
-
-    &__frame{
-        width: 100%;
-        height: 100%;
-    }
-
-    &__form{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        text-align: center;
-
-        #fb_name,
-        #fb_mail{
-            width: 90%;
-            padding: 13px 20px;
-            border: none;
-            border-radius: 4px;
-            color: $grey;
-            margin: 10px 0;
-            max-width: 340px;
-            box-sizing: border-box;
-            outline: none;
-        }
-        #fb_textarea{
-            width: 90%;
-            min-height: 140px;
-            border: none;
-            border-radius: 4px;
-            color: $grey;
-            margin: 10px 0;
-            padding: 13px 20px;
-            box-sizing: border-box;
-            max-width: 340px;
-            outline: none;
-        }
-    }
-    
-}
-
-.feedback__btn{
-    width: 100%;
-    white-space: nowrap;
-    position: absolute;
+.header-myworks {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  z-index: 10;
+  @include laptop() {
+    bottom: 3px;
+  }
+  @include phone() {
     bottom: 0;
-    background: lighten($green, 15%);
-
-    .feedback__btn-left,
-    .feedback__btn-right{
-        display: inline-block;
-        text-align: center;
-        width: 50%;
-        box-sizing: border-box;
-
-        #feedback__btn-left,
-        #feedback__btn-right{
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            padding: 15px 0;
-            box-sizing: border-box;
-            color: #fff;
-            background: $green;
-            width: 100%;
-            transition: .2s;
-
-            &:hover{
-                background: $lgreen;
-            }
+  }
+  .about__title {
+    background: transparent;
+    .title_63 {
+      z-index: 5;
+      @include laptop() {
+        font-size: 2.5em;
+      }
+      @include phone() {
+        font-size: 35px;
+        white-space: nowrap;
+      }
+      .about__title_icon {
+        position: absolute;
+        top: -12%;
+        left: -23%;
+        z-index: -1;
+        @include phone() {
+          top: -26%;
+          left: -17%;
         }
+        .icon {
+          fill: $lgrey;
+          fill-opacity: .6;
+          width: 150%;
+          @include phone() {
+            width: 125%;
+          }
+        }
+      }
     }
-
+  }
 }
 
-#btn__up{
-    text-align: center;
-    margin: 70px auto;
-    width: 30px;
-    height: 30px;
-    a{
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        .icon{
-            width: 27px;
-            height: 13px;
-            fill: #fff;
-        }
+.work-about {
+  padding: 70px 0;
+  box-sizing: border-box;
+  min-height: 1140px;
+  background: url('../images/bg/work-bg.png') center center no-repeat;
+  background-size: cover;
+  .about__title {
+    background: transparent;
+    line-height: 1;
+    @include phone() {
+      display: none;
     }
+    &_icon {
+      top: -90%!important;
+      left: -20%!important;
+      @include phone() {
+        top: -41px !important;
+        left: 0%!important;
+        width: 70%;
+        font-size: 35px;
+      }
+      .icon {
+        width: 150%!important;
+      }
+    }
+    .title_63 {
+      &:first-child {
+        padding: 0;
+      }
+    }
+    &_sub {
+      font-size: 63px;
+      color: #455a64;
+      font-family: bernier_regularregular;
+      text-transform: uppercase;
+      margin: 0;
+      display: inline-block;
+      font-weight: 200;
+      z-index: 5;
+      @include phone() {
+        font-size: 35px;
+      }
+    }
+  }
+  .phone-about_title {
+    display: none;
+    @include phone() {
+      display: block;
+    }
+  }
+}
+
+.quotes {
+  font-size: 28px;
+  color: $grey;
+}
+
+.work-reviews {
+  .flex {
+    &__item {
+      @include phone() {
+        margin: 30px 20px;
+      }
+    }
+  }
+  .quotes {
+    @include phone() {
+      text-align: center;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  &__item {
+    width: 360px;
+    min-height: 230px;
+    margin: 70px 20px;
+  }
+}
+
+.work-reviews_title {
+  color: $grey;
+  font-family: robotoregular;
+}
+
+.reviews-fio {
+  &__img,
+  &__desc {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__img {
+    padding-right: 20px;
+  }
+  &__desc {
+    color: $green;
+  }
+  &__name {
+    font-weight: bold;
+  }
+}
+
+.feedback {
+  width: 380px;
+  height: 450px;
+  margin: 0 auto;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  @include phone() {
+    width: 90%;
+  }
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/bg/feedback.jpg') center center no-repeat;
+    filter: blur(32px);
+    background-position: -45em -43em;
+  }
+  &__frame {
+    width: 100%;
+    height: 100%;
+  }
+  &__form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    #fb_name,
+    #fb_mail {
+      width: 90%;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 4px;
+      color: $grey;
+      margin: 10px 0;
+      max-width: 340px;
+      box-sizing: border-box;
+      outline: none;
+    }
+    #fb_textarea {
+      width: 90%;
+      min-height: 140px;
+      border: none;
+      border-radius: 4px;
+      color: $grey;
+      margin: 10px 0;
+      padding: 13px 20px;
+      box-sizing: border-box;
+      max-width: 340px;
+      outline: none;
+    }
+  }
+}
+
+.feedback__btn {
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  background: lighten($green, 15%);
+  .feedback__btn-left,
+  .feedback__btn-right {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    box-sizing: border-box;
+    #feedback__btn-left,
+    #feedback__btn-right {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      padding: 15px 0;
+      box-sizing: border-box;
+      color: #fff;
+      background: $green;
+      width: 100%;
+      transition: .2s;
+      &:hover {
+        background: $lgreen;
+      }
+    }
+  }
+}
+
+#btn__up {
+  text-align: center;
+  margin: 70px auto;
+  width: 30px;
+  height: 30px;
+  a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    .icon {
+      width: 27px;
+      height: 13px;
+      fill: #fff;
+    }
+  }
 }
