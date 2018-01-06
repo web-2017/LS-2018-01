@@ -873,42 +873,7 @@ body.mobile-sidebar .sidebar {
   fill: #fff;
 }
 
-.sidebar {
-  float: left;
-  width: 30%;
-  position: relative;
-  height: 1px;
-}
 
-@media (max-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 280px;
-    background: #20b5a1;
-    height: auto;
-    -moz-transform: translate3d(-280px, 0, 0);
-    -o-transform: translate3d(-280px, 0, 0);
-    -ms-transform: translate3d(-280px, 0, 0);
-    -webkit-transform: translate3d(-280px, 0, 0);
-    transform: translate3d(-280px, 0, 0);
-    z-index: 1000;
-    -webkit-transition: transform 0.3s;
-    -moz-transition: transform 0.3s;
-    -ms-transition: transform 0.3s;
-    -o-transition: transform 0.3s;
-    transition: transform 0.3s;
-    &:before {
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      height: 100%;
-      width: 0;
-    }
-  }
-}
 
 .sidebar__trigger {
   outline: none !important;

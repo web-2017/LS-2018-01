@@ -11,7 +11,7 @@ if(arrowDown){
       scrollTop: 750
     }, 800)
     return false;
-  })
+  });
 }
 
 if(arrowUp != undefined){
@@ -22,7 +22,7 @@ if(arrowUp != undefined){
       scrollTop: 0
     }, 800)
     return false;
-  })
+  });
 }
 
 

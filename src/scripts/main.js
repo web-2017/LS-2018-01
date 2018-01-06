@@ -4,5 +4,6 @@ const preload = require('./common/preload');
 const auth = require('./common/auth');
 const parallax = require('./common/parallax');
 const menuButton = require('./common/menu');
-const slider = require('./common/slider');
-
+const sliderMenu = require('./common/sliderMenu');
+const sidebar = require('./common/sidebar');
+// const slider = require('./common/slider');
