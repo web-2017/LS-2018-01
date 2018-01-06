@@ -10,4 +10,4 @@ let funMenu = () => {
 
 funMenu();
 
-module.exports = funcMenu;
+module.exports = funMenu;

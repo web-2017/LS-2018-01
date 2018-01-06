@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 var aviatitle = {
   generate: function (string, block) {
     var wordsArray = string.split(' '),
@@ -273,4 +275,5 @@ $('.works-slider__control-btn_right').on('click', function (e) {
   slider.moveSlide('next');
 });
 
-module.exports = Slider;
+
+module.exports = slider;
