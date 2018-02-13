@@ -9,28 +9,38 @@ block content
   block variables
     - var header__bg = "portfolio_header.png"
     - var worksd = 'blog__triange'
+    - 
+      var 
+      article_blog = [
+        'Самое важное в SASS',
+        'Приемы верстки без которых необходится ни один сайт',
+        'Самый необходимый набор Gulp плагинов',
+        'Почему я выбрал Jade'
+      ]
     
   .section.blog
     aside.sidebar
       nav.sidebar-blog
         a#sidebar-link(href="#")
         ul.sidebar-menu
-          
-            each item in ['Самое важное в SASS','Приемы верстки без которых необходится ни один сайт','Самый необходимый набор Gulp плагинов','Почему я выбрал Jade']
-              li.sidebar-menu__item
-                a(href="#").sidebar-menu__link #{item}
+          each item, index in article_blog
+            li(data-scroll='' + index).sidebar-menu__item
+               a(href="javascript:void(0)" ).sidebar-menu__link #{item}
+
     .blog-content
-      .blog-content__title
-        h2.title_35 Самое важное в SASS
-        .blog-content__data 
-          p 20 декабря 2017
-      .blog-content__text
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque nulla possimus reprehenderit voluptate nihil molestiae, nobis eveniet consequuntur ipsum libero in inventore architecto autem expedita eum doloribus ad ratione. Sunt, obcaecati? Est commodi minus natus aperiam fugit, porro animi ut labore non in fugiat assumenda quam eligendi deserunt veritatis itaque vero doloremque sequi necessitatibus voluptate totam. In, est nemo inventore neque laudantium eius dolor a earum voluptates perspiciatis, reiciendis repellendus, adipisci ratione delectus ex pariatur consequuntur eligendi asperiores eaque mollitia repellat quisquam consequatur facere. Inventore, eos. Odio unde porro doloribus quae dolorum dolorem nostrum maxime. Delectus odio animi omnis amet? Quisquam asperiores fugit voluptatum, nihil, magni sint repudiandae perferendis minima eum, doloremque tempore amet voluptatibus placeat dolores ut ipsam totam nam. Eaque eos sint molestias nam aut, corrupti iure perferendis labore quisquam. Officia quia, dolorum tenetur possimus quae aliquam reiciendis magni esse, incidunt corrupti dolorem voluptates sapiente. Sit dolore veritatis totam tenetur enim dolores minus cum iusto sequi sint, doloremque nihil ea optio nulla mollitia hic sed modi omnis provident eaque culpa eius quam? Earum, rerum vero temporibus perspiciatis nihil sint ipsa at necessitatibus voluptatum enim explicabo vitae repudiandae similique. Accusamus ex obcaecati quod debitis harum iste enim non, ullam expedita? Quia animi delectus deserunt nesciunt, non aliquam quae ducimus quibusdam temporibus vero dolore natus sapiente asperiores iure sint, vitae veritatis quaerat molestias? Officia, deserunt. Molestias laboriosam quod culpa rerum officia veritatis soluta nam maxime alias harum perferendis beatae pariatur eum quos asperiores dolor sit reprehenderit cupiditate quae odit, repellat fuga, nesciunt aliquid ea? Natus doloribus commodi incidunt repellat eum maxime adipisci neque dolor voluptatibus facilis ex dicta soluta nesciunt qui, in aspernatur nihil sit a ab inventore sequi quo, pariatur non! Maxime reiciendis totam magnam magni aut ratione fuga repellat, eaque vitae, voluptatem perspiciatis debitis consequuntur nisi quod.
-      .blog-content__title
-        h2.title_35 Приемы верстки без которых необходится ни один сайт
-        .blog-content__data 
-          p 20 декабря 2017
-      .blog-content__text
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque nulla possimus reprehenderit voluptate nihil molestiae, nobis eveniet consequuntur ipsum libero in inventore architecto autem expedita eum doloribus ad ratione. Sunt, obcaecati? Est commodi minus natus aperiam fugit, porro animi ut labore non in fugiat assumenda quam eligendi deserunt veritatis itaque vero doloremque sequi necessitatibus voluptate totam. In, est nemo inventore neque  dsd laudantium eius dolor a earum voluptates perspiciatis, reiciendis repellendus, adipisci ratione delectus ex pariatur consequuntur eligendi asperiores eaque mollitia repellat quisquam consequatur facere. Inventore, eos. Odio unde porro doloribus quae dolorum dolorem nostrum maxime. Delectus odio animi omnis amet? Quisquam asperiores fugit voluptatum, nihil, magni sint repudiandae perferendis minima eum, doloremque tempore amet voluptatibus placeat dolores ut ipsam totam nam. Eaque eos sint molestias nam aut, corrupti iure perferendis labore quisquam. Officia quia, dolorum tenetur possimus quae aliquam reiciendis magni esse, incidunt corrupti dolorem voluptates sapiente. Sit dolore veritatis totam tenetur enim dolores minus cum iusto sequi sint, doloremque nihil ea optio nulla mollitia hic sed modi omnis provident eaque culpa eius quam? Earum, rerum vero temporibus perspiciatis nihil sint ipsa at necessitatibus voluptatum enim explicabo vitae repudiandae similique. Accusamus ex obcaecati quod debitis harum iste enim non, ullam expedita? Quia animi delectus deserunt nesciunt, non aliquam quae ducimus quibusdam temporibus vero dolore natus sapiente asperiores iure sint, vitae veritatis quaerat molestias? Officia, deserunt. Molestias laboriosam quod culpa rerum officia veritatis soluta nam maxime alias harum perferendis beatae pariatur eum quos asperiores dolor sit reprehenderit cupiditate quae odit, repellat fuga, nesciunt aliquid ea? Natus doloribus commodi incidunt repellat eum maxime adipisci neque dolor voluptatibus facilis ex dicta soluta nesciunt qui, in aspernatur nihil sit a ab inventore sequi quo, pariatur non! Maxime reiciendis totam magnam magni aut ratione fuga repellat, eaque vitae, voluptatem perspiciatis debitis consequuntur nisi quod.
+      .blog-content_box
+        .blog-content__title
+          h2.title_35 Самое важное в SASS
+          .blog-content__data 
+            p 20 декабря 2017
+        .blog-content__text
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque nulla possimus reprehenderit voluptate nihil molestiae, nobis eveniet consequuntur ipsum libero in inventore architecto autem expedita eum doloribus ad ratione. Sunt, obcaecati? Est commodi minus natus aperiam fugit, porro animi ut labore non in fugiat assumenda quam eligendi deserunt veritatis itaque vero doloremque sequi necessitatibus voluptate totam. In, est nemo inventore neque laudantium eius dolor a earum voluptates perspiciatis, reiciendis repellendus, adipisci ratione delectus ex pariatur consequuntur eligendi asperiores eaque mollitia repellat quisquam consequatur facere. Inventore, eos. Odio unde porro doloribus quae dolorum dolorem nostrum maxime. Delectus odio animi omnis amet? Quisquam asperiores fugit voluptatum, nihil, magni sint repudiandae perferendis minima eum, doloremque tempore amet voluptatibus placeat dolores ut ipsam totam nam. Eaque eos sint molestias nam aut, corrupti iure perferendis labore quisquam. Officia quia, dolorum tenetur possimus quae aliquam reiciendis magni esse, incidunt corrupti dolorem voluptates sapiente. Sit dolore veritatis totam tenetur enim dolores minus cum iusto sequi sint, doloremque nihil ea optio nulla mollitia hic sed modi omnis provident eaque culpa eius quam? Earum, rerum vero temporibus perspiciatis nihil sint ipsa at necessitatibus voluptatum enim explicabo vitae repudiandae similique. Accusamus ex obcaecati quod debitis harum iste enim non, ullam expedita? Quia animi delectus deserunt nesciunt, non aliquam quae ducimus quibusdam temporibus vero dolore natus sapiente asperiores iure sint, vitae veritatis quaerat molestias? Officia, deserunt. Molestias laboriosam quod culpa rerum officia veritatis soluta nam maxime alias harum perferendis beatae pariatur eum quos asperiores dolor sit reprehenderit cupiditate quae odit, repellat fuga, nesciunt aliquid ea? Natus doloribus commodi incidunt repellat eum maxime adipisci neque dolor voluptatibus facilis ex dicta soluta nesciunt qui, in aspernatur nihil sit a ab inventore sequi quo, pariatur non! Maxime reiciendis totam magnam magni aut ratione fuga repellat, eaque vitae, voluptatem perspiciatis debitis consequuntur nisi quod.
+      .blog-content_box
+        .blog-content__title
+          h2.title_35 Приемы верстки без которых необходится ни один сайт
+          .blog-content__data 
+            p 20 декабря 2017
+        .blog-content__text
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque nulla possimus reprehenderit voluptate nihil molestiae, nobis eveniet consequuntur ipsum libero in inventore architecto autem expedita eum doloribus ad ratione. Sunt, obcaecati? Est commodi minus natus aperiam fugit, porro animi ut labore non in fugiat assumenda quam eligendi deserunt veritatis itaque vero doloremque sequi necessitatibus voluptate totam. In, est nemo inventore neque  dsd laudantium eius dolor a earum voluptates perspiciatis, reiciendis repellendus, adipisci ratione delectus ex pariatur consequuntur eligendi asperiores eaque mollitia repellat quisquam consequatur facere. Inventore, eos. Odio unde porro doloribus quae dolorum dolorem nostrum maxime. Delectus odio animi omnis amet? Quisquam asperiores fugit voluptatum, nihil, magni sint repudiandae perferendis minima eum, doloremque tempore amet voluptatibus placeat dolores ut ipsam totam nam. Eaque eos sint molestias nam aut, corrupti iure perferendis labore quisquam. Officia quia, dolorum tenetur possimus quae aliquam reiciendis magni esse, incidunt corrupti dolorem voluptates sapiente. Sit dolore veritatis totam tenetur enim dolores minus cum iusto sequi sint, doloremque nihil ea optio nulla mollitia hic sed modi omnis provident eaque culpa eius quam? Earum, rerum vero temporibus perspiciatis nihil sint ipsa at necessitatibus voluptatum enim explicabo vitae repudiandae similique. Accusamus ex obcaecati quod debitis harum iste enim non, ullam expedita? Quia animi delectus deserunt nesciunt, non aliquam quae ducimus quibusdam temporibus vero dolore natus sapiente asperiores iure sint, vitae veritatis quaerat molestias? Officia, deserunt. Molestias laboriosam quod culpa rerum officia veritatis soluta nam maxime alias harum perferendis beatae pariatur eum quos asperiores dolor sit reprehenderit cupiditate quae odit, repellat fuga, nesciunt aliquid ea? Natus doloribus commodi incidunt repellat eum maxime adipisci neque dolor voluptatibus facilis ex dicta soluta nesciunt qui, in aspernatur nihil sit a ab inventore sequi quo, pariatur non! Maxime reiciendis totam magnam magni aut ratione fuga repellat, eaque vitae, voluptatem perspiciatis debitis consequuntur nisi quod.
 
   include ../common/footer
